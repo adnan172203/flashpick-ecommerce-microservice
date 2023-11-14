@@ -9,12 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Change directory to server-test-backend
-        working-directory: ./server-test-backend
-        run: cd .
-
       - name: Install flashpick backend Server Dependencies
-        run: npm install
+        run: cd server-test-backend && npm install
 
       - name: Run tests
-        run: npm run test
+        run: cd server-test-backend && npm run test
