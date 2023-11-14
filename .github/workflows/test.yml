@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install flashpick backend Server Dependencies
-        run: npm install
+        run: cd ./server-test-backend npm install
 
-      - name: Run tests # Run tests of all packages
-        run: npm run test
+      - name: Run tests
+        run: cd ./server-test-backend npm run test
