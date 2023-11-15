@@ -154,7 +154,7 @@ describe('AuthService', () => {
       expect(jwt.verify(result, process.env.JSON_TOKEN_KEY)).toBeDefined();
     });
 
-    it('should hash the password before storing it in the database', async () => {
+    it('should hash the password before storing it in the database', () => {
       // jest.spyOn(bcrypt, 'hash').mockResolvedValue('hashedPassword',10);
 
       // await authService.signUp({
